@@ -36,6 +36,7 @@ saved_visualizations/
 *.jpg
 *.jpeg
 *.gif
+!images/olympic_rings.png
 
 # Streamlit
 .streamlit/
