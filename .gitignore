@@ -29,11 +29,6 @@ venv.bak/
 .DS_Store
 *.iml
 
-# Data files (CSV files are large, don't commit them)
-data/
-*.csv
-!noc_regions.csv
-!athlete_events.csv
 
 # Images (generated saved_visualizations)
 saved_visualizations/
