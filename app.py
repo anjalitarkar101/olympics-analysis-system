@@ -14,6 +14,9 @@ import os
 import preprocessor
 import helper_functions as helper
 
+# Create saved_visualizations folder if it doesn't exist
+os.makedirs('saved_visualizations', exist_ok=True)
+
 # ==========================================================
 # Page Configuration
 # ==========================================================
