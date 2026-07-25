@@ -58,7 +58,7 @@ st.markdown("---")
 # ==========================================================
 # Sidebar
 # ==========================================================
-st.sidebar.title("🏅 About This App ")
+st.sidebar.title("🏛️ About This App ")
 st.sidebar.image(
     'images/olympic_rings.png',
     use_column_width=True
