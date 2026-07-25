@@ -36,7 +36,7 @@ olympics-analysis-system/
 ├── helper_functions.py       # Analysis and helper functions
 ├── preprocessor.py           # Data preprocessing script
 ├── requirements.txt          # Python dependencies
-├── setup.sh                  # Setup script
+├── setup.sh           tem        # Setup script
 ├── .gitignore               # Git ignore file
 ├── data/                     # CSV files (gitignored)
 │   ├── athlete_events.csv

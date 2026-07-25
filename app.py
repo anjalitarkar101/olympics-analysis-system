@@ -18,16 +18,6 @@ import helper_functions as helper
 os.makedirs('saved_visualizations', exist_ok=True)
 
 # ==========================================================
-# Page Configuration
-# ==========================================================
-st.set_page_config(
-    page_title="Olympics Analysis System",
-    page_icon="🏅",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
-# ==========================================================
 # Load Data from data/ folder
 # ==========================================================
 @st.cache_data
@@ -44,6 +34,26 @@ def load_data():
         st.stop()
 
 df = load_data()
+
+
+# ==========================================================
+# Page Configuration
+# ==========================================================
+st.set_page_config(
+    page_title="Olympics Analysis System",
+    page_icon="🏅",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+
+# ==========================================================
+# Main Title
+# ==========================================================
+st.title("🏅 Olympics Analysis System")
+st.markdown("Explore Olympic history with interactive visualizations and insights!")
+st.markdown("---")
+
 
 # ==========================================================
 # Sidebar
@@ -81,7 +91,7 @@ user_menu = st.sidebar.radio(
 )
 
 # ==========================================================
-# Medal Tally
+# SECTION 1  : Medal Tally
 # ==========================================================
 if user_menu == 'Medal Tally':
     st.title(f"{season_icon} {selected_season} - Medal Tally Dashboard")
@@ -127,7 +137,7 @@ if user_menu == 'Medal Tally':
             st.metric("🥇🥈🥉 Total", total_medals)
 
 # ==========================================================
-# Overall Analysis
+# SECTION 2 : Overall Analysis
 # ==========================================================
 elif user_menu == 'Overall Analysis':
     st.title(f"{season_icon} {selected_season} - Overall Analysis")
@@ -227,7 +237,7 @@ elif user_menu == 'Overall Analysis':
         st.info("No medal data available for this sport")
 
 # ==========================================================
-# Country-wise Analysis
+# SECTION 3 : Country-wise Analysis
 # ==========================================================
 elif user_menu == 'Country-wise Analysis':
     st.title(f"{season_icon} {selected_season} - Country-wise Analysis")
@@ -280,7 +290,7 @@ elif user_menu == 'Country-wise Analysis':
         st.info(f"No athletes found for {selected_country}")
 
 # ==========================================================
-# Athlete-wise Analysis
+# SECTION 4 : Athlete-wise Analysis
 # ==========================================================
 elif user_menu == 'Athlete-wise Analysis':
     st.title(f"{season_icon} {selected_season} - Athlete-wise Analysis")
