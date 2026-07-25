@@ -14,6 +14,16 @@ import os
 import preprocessor
 import helper_functions as helper
 
+# ==========================================================
+# Page Configuration
+# ==========================================================
+st.set_page_config(
+    page_title="Olympics Analysis System",
+    page_icon="🏅",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # Create saved_visualizations folder if it doesn't exist
 os.makedirs('saved_visualizations', exist_ok=True)
 
@@ -36,16 +46,6 @@ def load_data():
 df = load_data()
 
 
-# ==========================================================
-# Page Configuration
-# ==========================================================
-st.set_page_config(
-    page_title="Olympics Analysis System",
-    page_icon="🏅",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 
 # ==========================================================
 # Main Title
@@ -58,7 +58,7 @@ st.markdown("---")
 # ==========================================================
 # Sidebar
 # ==========================================================
-st.sidebar.title("🏅 Olympics Analysis")
+st.sidebar.title("🏅 About This App ")
 st.sidebar.image(
     'images/olympic_rings.png',
     use_column_width=True
